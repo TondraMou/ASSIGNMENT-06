@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peddy Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body class="lato">
+    <header>
+        <nav class="flex justify-between w-11/12 mx-auto py-4">
+            <div class="flex gap-2 flex-1">
+                <img src="images/logo.webp" alt="" class="w-[28px] h-[24px]">
+                <h2 class="font-bold text-2xl">Peddy</h2>
+            </div>
+            <div class="md:flex md:flex-1 hidden gap-8 mt-2">
+                <h2>Home</h2>
+                <h2>Shop</h2>
+                <h2>Contact</h2>
+            </div>
+            <div class="hidden md:flex custom p-3">
+                <img src="images/icons8-user-16.png" alt="">
+            </div>
+            <div class="dropdown md:hidden">
+                <div tabindex="0" role="button" class="btn w-6 h-6 rounded-full mr-3 ">
+
+                    <div class="bg-white p-3 rounded-full border">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500 text-lg "
+                            fill="currentColor" viewBox="0 0 24 24" stroke="currentColor">
+                            <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path>
+                        </svg>
+                    </div>
+
+                </div>
+                <ul tabindex="0"
+                    class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 -left-44 p-2 w-52 shadow">
+                    <li><a class="font-bold text-black">Home</a></li>
+                    <li><a class="font-bold text-gray-500">Shop</a></li>
+                    <li><a class="font-bold text-gray-500">Contact</a></li>
+                    <li><a><img src="images/icons8-user-16.png" alt=""></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+</body>
+</html>

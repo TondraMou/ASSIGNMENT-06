@@ -1,0 +1,9 @@
+.custom{
+    width: 56px;
+    height: 56px;
+    border: 1px solid rgba(14, 122, 129, 0.2);
+    border-radius: 50%;
+}
+.lato{
+    font-family: "Lato", sans-serif;
+}
