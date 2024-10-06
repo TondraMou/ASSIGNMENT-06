@@ -7,3 +7,24 @@
 .lato{
     font-family: "Lato", sans-serif;
 }
+.category-btn{
+    width: 150px;
+    padding: 15px 24px 15px 24px;
+    border: 1px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 800;
+}
+.active {
+    width: 150px;
+    padding: 15px 24px 15px 24px;
+    border: 1.5px solid rgb(14, 122, 129);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 800;
+    border-radius: 120px;
+  }
