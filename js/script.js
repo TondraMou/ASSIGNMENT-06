@@ -47,8 +47,8 @@ const loadPets = async (categoryName = null) => {
         petsContainer.innerHTML = `
         <div class="min-h-[300px] flex flex-col gap-5 justify-center items-center">
         <img src="images/error.webp">
-        <h2>No Information Available</h2>
-        <p>"Currently, there are no pets available in this category. Please explore other options."</p>
+        <h2 class="text-center font-bold text-2xl">No Information Available</h2>
+        <p class="text-center text-gray-400">"Currently, there are no pets available in this category. Please explore other options."</p>
         </div>
         `;
         return;
