@@ -118,7 +118,7 @@ const displayPets = (pets) => {
           </div>
           <div class="flex gap-2">
             <i class="ri-women-line text-gray-400"></i>
-            <p class="text-gray-400">Gender: ${pet.gender}</p>
+            <p class="text-gray-400">Gender: ${pet.gender || 'Unknown'}</p>
           </div>
           <div class="flex gap-2">
             <i class="ri-money-dollar-circle-fill text-gray-400"></i>
@@ -188,7 +188,7 @@ const showPetDetails = async (petId) => {
         </div>
         <div class="flex gap-2">
         <i class="ri-women-line text-gray-400"></i>
-        <p class="text-gray-400">Gender: ${pet.gender}</p>
+        <p class="text-gray-400">Gender: ${pet.gender || 'Unknown'}</p>
         </div>
         <div class="flex gap-2">
         <i class="ri-money-dollar-circle-fill text-gray-400"></i>
