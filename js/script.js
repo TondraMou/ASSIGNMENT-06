@@ -124,10 +124,10 @@ const showPetDetails = async (petId) => {
     const response = await fetch(`https://openapi.programming-hero.com/api/peddy/pet/${petId}`);
     const data = await response.json();
 
-    console.log(data); // Log the entire response to debug
+    console.log(data);
 
     if (data.status) {
-      const pet = data.petData; // Change this line to access petData
+      const pet = data.petData;
       const modalContent = `
         <img src="${pet.image}" alt="${pet.pet_name}" class="w-full h-auto mb-2">
         <h3 class="font-semibold text-xl">${pet.pet_name}</h3>
@@ -158,7 +158,7 @@ const showPetDetails = async (petId) => {
       `;
       document.getElementById('modal-content').innerHTML = modalContent;
       const modal = document.getElementById('customModal');
-      modal.showModal(); // Show the modal
+      modal.showModal();
     } else {
       console.log('Failed to fetch pet details');
     }
