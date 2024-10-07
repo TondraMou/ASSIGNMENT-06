@@ -90,7 +90,7 @@ const displayPets = (pets) => {
     petCard.innerHTML = `
       <div class="border rounded-lg border-slate-200">
         <div class="h-[160px]"> 
-          <img src="${pet.image}" alt="${pet.pet_name}" class="border rounded-lg aspect-video w-full h-full object-cover">
+          <img src="${pet.image}" alt="${pet.pet_name}" class="border rounded-lg w-full h-full object-cover">
         </div>
         <div class="pet-details">
           <h3 class="font-semibold text-xl">${pet.pet_name}</h3>
@@ -145,7 +145,7 @@ function addToList(imageUrl) {
   newImageContainer.innerHTML = `
     <div class="border rounded-lg border-slate-200">
       <div class="p-2 h-[160px]">
-        <img src="${imageUrl}" alt="" class="border rounded-lg aspect-video h-full w-full object-cover">
+        <img src="${imageUrl}" alt="" class="border rounded-lg h-full w-full object-cover">
       </div>
     </div>
   `;
