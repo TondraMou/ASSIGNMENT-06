@@ -129,7 +129,7 @@ const displayPets = (pets) => {
             <button class="p-2 border rounded-lg border-[#0E7A8126]" onclick="addToList('${pet.image}')">
               <i class="ri-thumb-up-line"></i>
             </button>
-            <button class="p-2 border rounded-lg border-[#0E7A8126] text-[#0E7A81] font-semibold">Adopt</button>
+            <button class="p-2 border rounded-lg border-[#0E7A8126] text-[#0E7A81] font-semibold" onclick="adoptPet(this)">Adopt</button>
             <button class="p-2 border rounded-lg border-[#0E7A8126] text-[#0E7A81] font-semibold" onclick="showPetDetails(${pet.petId})">Details</button>
           </div>
         </div>
@@ -213,6 +213,28 @@ const showPetDetails = async (petId) => {
   }
 };
 
+function adoptPet(button) {
+  const modal = document.getElementById('adoptionModal');
+  const countdownElement = document.getElementById('countdown');
+  let countdown = 3;
+  modal.classList.remove('hidden');
+  modal.showModal();
+  countdownElement.innerText = countdown;
+
+  const interval = setInterval(() => {
+    countdown -= 1;
+    countdownElement.innerText = countdown;
+
+    if (countdown <= 0) {
+      clearInterval(interval);
+      modal.close();
+      button.disabled = true;
+      button.innerText = "Adopted";
+      button.classList.add('bg-slate-200');
+      modal.classList.add('hidden');
+    }
+  }, 1000);
+}
  
 loadPets();
 loadCategories();
