@@ -44,13 +44,31 @@
 
           petCard.innerHTML = `
             <div class="border rounded-lg border-slate-200">
-            <img src="${pet.image}" alt="${pet.pet_name}" class="border rounded-lg">
+            <div class="h-[160px"> <img src="${pet.image}" alt="${pet.pet_name}" class="border rounded-lg w-full h-full"></div>
             <div class="pet-details">
-              <h3 class="pet-name">${pet.pet_name}</h3>
-              <p class="pet-breed">Breed: ${pet.breed || 'Unknown'}</p>
-              <p class="pet-gender">Gender: ${pet.gender}</p>
-              <p class="pet-dob">Date of Birth: ${pet.date_of_birth || 'Not available'}</p>
-              <p class="pet-price">Price: $${pet.price || 'Not available'}</p>
+              <h3 class="font-semibold text-xl">${pet.pet_name}</h3>
+              <div class="flex gap-2">
+              <i class="ri-function-line text-gray-400"></i>
+              <p class="text-gray-400">Breed: ${pet.breed || 'Unknown'}</p>
+              </div>
+              <div class="flex gap-2">
+              <i class="ri-calendar-schedule-line text-gray-400"></i>
+              <p class="text-gray-400">Birth: ${pet.date_of_birth || 'Not available'}</p>
+              </div>
+              <div class="flex gap-2">
+              <i class="ri-women-line text-gray-400"></i>
+              <p class="text-gray-400">Gender: ${pet.gender}</p>
+              </div>
+              <div class="flex gap-2">
+              <i class="ri-money-dollar-circle-fill text-gray-400"></i>
+              <p class="text-gray-400">Price: $${pet.price || 'Not available'}</p>
+              </div>
+              <hr class="mt-2 mb-2">
+              <div class="flex justify-between p-1">
+              <button class="p-2 border rounded-lg border-[#0E7A8126]"><i class="ri-thumb-up-line"></i></button>
+              <button class="p-2 border rounded-lg border-[#0E7A8126] text-[#0E7A81] font-semibold">Adopt</button>
+              <button class="p-2 border rounded-lg border-[#0E7A8126] text-[#0E7A81] font-semibold">Details</button>
+              </div>
             </div>
             </div>
           `;
