@@ -16,7 +16,7 @@ const displayCategories = (categories) => {
   categories.forEach((item) => {
     const buttonContainer = document.createElement("div");
     buttonContainer.innerHTML = `
-      <button id="btn-${item.category}" onclick="loadPets('${item.category}')" class="category-btn abc">
+      <button id="btn-${item.category}" onclick="handleCategoryClick('${item.category}')" class="category-btn abc">
         <img src="${item.category_icon}" alt="${item.category}" class="w-[30px]" />
         <span>${item.category}</span>
       </button>
@@ -61,6 +61,20 @@ const loadPets = async (categoryName = null) => {
     }
   } catch (error) {
     console.error('Error fetching pets:', error);
+  }
+};
+
+const handleCategoryClick = (categoryName) => {
+  loadPets(categoryName);
+
+  // Remove active class from all buttons
+  const categoryButtons = document.querySelectorAll('.category-btn');
+  categoryButtons.forEach((btn) => btn.classList.remove('active'));
+
+  // Add active class to the clicked button
+  const activeButton = document.getElementById(`btn-${categoryName}`);
+  if (activeButton) {
+    activeButton.classList.add('active');
   }
 };
 
